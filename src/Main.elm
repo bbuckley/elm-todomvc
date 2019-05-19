@@ -37,7 +37,7 @@ port setStorage : Model -> Cmd msg
 
 
 {-| We want to `setStorage` on every update. This function adds the setStorage
-command for every step of the update function.
+command for every step of the update function!
 -}
 updateWithStorage : Msg -> Model -> ( Model, Cmd Msg )
 updateWithStorage msg model =
