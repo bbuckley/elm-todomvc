@@ -241,10 +241,7 @@ view model =
             [ lazy viewInput model.field
             , lazy2 viewEntries model.visibility model.entries
             , lazy2 viewControls model.visibility model.entries
-            , viewControls model.visibility model.entries
-            , button [ onClick Clear ][text "Clear"]
-            , button [ onClick Clear ][text "Clear"]
-            ]
+           ]
         , infoFooter
         ]
 
@@ -444,7 +441,7 @@ viewControlsClear entriesCompleted =
         ]
 
 
-infoFooter : Html msg
+infoFooter : Html Msg
 infoFooter =
     footer [ class "info" ]
         [ p [] [ text "Double-click to edit a todo" ]
@@ -455,5 +452,8 @@ infoFooter =
         , p []
             [ text "Part of "
             , a [ href "http://todomvc.com" ] [ text "TodoMVC" ]
+            ]
+        , p [ onClick Clear ]
+            [ text "clear"
             ]
         ]
