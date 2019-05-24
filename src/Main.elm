@@ -222,6 +222,8 @@ view model =
             [ lazy viewInput model.field
             , lazy2 viewEntries model.visibility model.entries
             , lazy2 viewControls model.visibility model.entries
+            , viewControls model.visibility model.entries
+            , viewControls model.visibility model.entries
             ]
         , infoFooter
         ]
